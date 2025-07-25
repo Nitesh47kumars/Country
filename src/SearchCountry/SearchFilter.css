@@ -35,7 +35,6 @@
   font-size: 1rem;
   border-radius: 6px;
   border: 1px solid #ccc;
-  min-width: 150px;
   font-weight: 700;
   cursor: pointer;
   transition: border-color 0.3s;
@@ -51,4 +50,13 @@
   color: white;
   font-weight: 700;
   cursor: pointer;
+}
+
+@media screen and (max-width:476px) {
+  .searchFilter-container input{
+    min-width: 100%;
+  }
+  .filter-section{
+    min-width: 100%;
+  }
 }
