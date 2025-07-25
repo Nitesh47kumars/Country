@@ -1,6 +1,7 @@
 .country-container {
-    padding: 2rem;
-    background-color: #f5f7fa;
+    width: 100%;
+    padding: 2rem 1rem;
+    background: linear-gradient(270deg, #000 , #333, #000);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -8,19 +9,23 @@
 }
 
 .country-container ul {
+    width: 100%;
     max-width: 80rem;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
     gap: 2rem;
 }
 
 .country-card {
-    background-color: #ffffff;
-    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    border-radius: 6px;
     overflow: hidden;
+    max-width: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: all 0.2s ease;
 }
@@ -29,11 +34,16 @@
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
+.country-image{
+    width: 100%;
+    height: auto;
+}
 
 .country-image img {
     width: 100%;
-    height: 180px;
+    height: auto;
     object-fit: cover;
+    aspect-ratio: 16/9;
 }
 
 .country-details {
@@ -42,7 +52,7 @@
 
 .country-details h1 {
     text-align: center;
-    font-size: 2rem;
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
     margin-bottom: 1.4rem;
     color: #333;
 }
@@ -50,10 +60,10 @@
 .country-details p {
     margin: 0.8rem 0;
     color: #666;
-    font-size: 0.95rem;
+    font-size: clamp(0.85rem, 2vw, 1rem);
 }
 
-.country-details button{
+.button-link{
     display: flex;
     align-items: center;
     gap: 5px;
@@ -63,10 +73,12 @@
     padding: 0.5rem 0.9rem;
     border-radius: 3px;
     color: white;
+    font-size: clamp(0.85rem, 2vw, 1rem);
     font-weight: 700;
+    text-decoration: none !important;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1100px) {
     .country-container ul{
         grid-template-columns: repeat(3,1fr);
     }

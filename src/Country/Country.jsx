@@ -64,8 +64,8 @@ const Country = () => {
                 <p>Capital: {capital}</p>
                 <p>Population: {population}</p>
                 <p>Region: {region}</p>
-                <NavLink to={`/country/${name.common}`}>
-                  <button >Read More<FaArrowRight/></button>
+                <NavLink to={`/country/${name.common}`} className={"button-link"}>
+                  Read More<FaArrowRight/>
                 </NavLink>
               </div>
             </li>

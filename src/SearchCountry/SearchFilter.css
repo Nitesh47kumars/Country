@@ -1,30 +1,36 @@
 .searchFilter-container {
   display: flex;
   flex-wrap: wrap;
+  max-width: 80rem;
   width: 100%;
   gap: 1rem;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
   border-radius: 8px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
-
+.searchFilter-container input,
+.filter-section,
+.searchFilter-btn{
+  background-color: #555;
+  border: none;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
 .searchFilter-container input {
+  flex: 0.5;
   color: white;
-  background-color: black;
   min-width: 200px;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
   outline: none;
-  transition: border-color 0.3s;
+  cursor:text;
 }
 
 .filter-section {
   color: white;
-  background-color: black;
   padding: 0.5rem;
   font-size: 1rem;
   border-radius: 6px;
@@ -40,7 +46,6 @@
 }
 
 .searchFilter-btn{
-  background-color: black;
   padding: 0.5rem;
   border-radius: 6px;
   color: white;
