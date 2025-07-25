@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Japan",
+    "capital": "Tokyo",
+    "population": 125800000,
+    "interesting_fact": "Japan is made up of over 6,800 islands."
+  },
+  {
+    "id": 2,
+    "name": "Brazil",
+    "capital": "Brasília",
+    "population": 214000000,
+    "interesting_fact": "Brazil is home to about 60% of the Amazon Rainforest."
+  },
+  {
+    "id": 3,
+    "name": "Canada",
+    "capital": "Ottawa",
+    "population": 38930000,
+    "interesting_fact": "Canada has the longest coastline in the world."
+  },
+  {
+    "id": 4,
+    "name": "Egypt",
+    "capital": "Cairo",
+    "population": 111000000,
+    "interesting_fact": "The Great Pyramid of Giza is the oldest of the Seven Wonders of the Ancient World."
+  },
+  {
+    "id": 5,
+    "name": "Australia",
+    "capital": "Canberra",
+    "population": 26700000,
+    "interesting_fact": "Australia is home to more kangaroos than people."
+  },
+  {
+    "id": 6,
+    "name": "India",
+    "capital": "New Delhi",
+    "population": 1410000000,
+    "interesting_fact": "India is the world's largest democracy."
+  },
+  {
+    "id": 7,
+    "name": "France",
+    "capital": "Paris",
+    "population": 68000000,
+    "interesting_fact": "France is the most visited country in the world."
+  },
+  {
+    "id": 8,
+    "name": "Norway",
+    "capital": "Oslo",
+    "population": 5500000,
+    "interesting_fact": "Norway has more electric cars per capita than any other country."
+  },
+  {
+    "id": 9,
+    "name": "South Africa",
+    "capital": "Pretoria (administrative), Cape Town (legislative), Bloemfontein (judicial)",
+    "population": 60000000,
+    "interesting_fact": "South Africa has three capital cities."
+  },
+  {
+    "id": 10,
+    "name": "Nepal",
+    "capital": "Kathmandu",
+    "population": 30000000,
+    "interesting_fact": "Nepal is home to Mount Everest, the highest point on Earth."
+  }
+]

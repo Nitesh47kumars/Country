@@ -1,0 +1,52 @@
+/* Container styling */
+.searchFilter-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Input styling */
+.searchFilter-container input {
+  color: white;
+  background-color: black;
+  min-width: 200px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+/* Select styling */
+.filter-section {
+  color: white;
+  background-color: black;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-width: 150px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.filter-section:focus {
+  border-color: #007bff;
+}
+
+.searchFilter-btn{
+  background-color: black;
+  padding: 0.5rem;
+  border-radius: 6px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}

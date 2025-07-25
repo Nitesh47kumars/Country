@@ -1,0 +1,167 @@
+/* Container setup */
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #1e1e1e;
+}
+.post-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1300px;
+    padding: 30px 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+/* Grid layout for posts */
+.post-container ol {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    counter-reset: post-counter;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Individual post styling */
+.post-list {
+    counter-increment: post-counter;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 40px;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.post-list:hover {
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.08);
+}
+
+/* Number above each post */
+.post-list::before {
+    content: counter(post-counter);
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #007bff;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 32px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(255,255,255,0.1);
+}
+
+/* Title and body */
+.post-list h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #f0f0f0;
+}
+
+.post-list p {
+    font-size: 16px;
+    color: #cccccc;
+}
+
+/* Buttons */
+
+.post-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+.post-buttons button {
+    width: 100%;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.post-list button:hover {
+    background-color: #0056b3;
+}
+
+.post-list button:last-child {
+    background-color: #dc3545;
+}
+
+.post-list button:last-child:hover {
+    background-color: #a71d2a;
+}
+
+/* Responsive behavior */
+@media (max-width: 900px) {
+    .post-container ol {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .post-container ol {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Post form */
+.post-form {
+    height: 35px;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.post-inputs {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+
+.post-inputs input {
+    outline: none;
+    border: 1px solid #444;
+    border-radius: 2px;
+    width: 100%;
+    background-color: #333;
+    color: #f1f1f1;
+    padding-left: 8px;
+    box-shadow: 0.1rem 0.1rem 0.2rem rgba(255, 255, 255, 0.1);
+}
+.post-inputs input:focus {
+    box-shadow: 0.1rem 0.1rem 0.3rem rgba(255, 255, 255, 0.3);
+}
+
+.post-form button {
+    background-color: #0056ff;
+    color: white;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    padding: 0 12px;
+    box-shadow: 0.1rem 0.1rem 0.1rem rgba(255, 255, 255, 0.2);
+}
+.post-form button:hover {
+    background-color: #0056bf;
+    box-shadow: 0.1rem 0.1rem 0.3rem rgba(255, 255, 255, 0.4);
+}

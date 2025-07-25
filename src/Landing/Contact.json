@@ -1,0 +1,17 @@
+[
+    {
+        "icon":"FaLocationDot",
+        "title": "Find us",
+        "details": "Pune, Maharastra"
+    },
+    {
+        "icon":"IoCallSharp",
+        "title": "Call us",
+        "details": "7988576105"
+    },
+    {
+        "icon":"IoMail",
+        "title": "Mail us",
+        "details": "Niteshgnkc@mail.com"
+    }
+]
