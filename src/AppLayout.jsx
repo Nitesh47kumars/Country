@@ -6,7 +6,7 @@ import Footer from './Landing/Footer'
 const AppLayout = () => {
   return (
     <>
-        <Navbar />
+        <Navbar/>
         <Outlet/>
         <Footer/>
     </>

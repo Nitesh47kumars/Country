@@ -5,6 +5,7 @@ import About from './About/About'
 import Contact from './Contact/Contact'
 import Country from './Country/Country'
 import CountryData from './Country/CountryData/CountryData'
+import Posts from './Component/Posts'
 
 function App() {
 
@@ -29,6 +30,10 @@ function App() {
           path: "/country/:id",
           element:<CountryData/>
           
+        },
+        {
+          path: "/posts",
+          element:<Posts/>
         },
         {
           path: "/contact",

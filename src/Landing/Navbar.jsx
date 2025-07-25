@@ -26,6 +26,12 @@ const Navbar = () => {
                 <li>
                     <NavLink to="/contact" >Contact</NavLink>
                 </li>
+                <li>
+                    <NavLink to="/posts" >API-Pratice</NavLink>
+                </li>
+                <li>
+                    <a href="https://github.com/Nitesh47kumars" >GitHub</a>
+                </li>
             </ul>
         </nav>
         <div className='mob-btn'>

@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useTransition } from 'react'
 import { deleteAPI, getAPI } from '../API/GetAPI';
 import './Posts.css'
 import Form from './Form';
+import Loader from '../Loader/Loader';
 
 const Posts = () => {
+    const [isPending,startTransition] = useTransition();
     const [post,setPost] = useState([]);
     const [updateInput,setUpdateInput] = useState({});
-
-    const getApi = async () =>{
-        const res = await getAPI();
-        return setPost(res.data);
-    }
     
     useEffect(()=>{
-        getApi();
+        startTransition( async ()=>{
+            const res = await getAPI()
+            return setPost(res.data)
+        })
     },[]);
 
     const editFunction = (curr) => {setUpdateInput(curr)};
@@ -29,6 +29,8 @@ const Posts = () => {
             console.log("Failed to Delete...",res.status)
         }
     }
+
+    if(isPending) return <Loader/>
     
   return (
     <>
