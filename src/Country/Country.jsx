@@ -13,6 +13,8 @@ const Country = () => {
   const [search,setSearch] = useState("");
   const [filter,setFilter] = useState('all');
 
+  const [debounceSearch,setDebounceSearch] = useState('');
+
   useEffect(()=>{
     startTransition( async ()=>{
       const res = await getCountries();
@@ -20,8 +22,16 @@ const Country = () => {
     })
   },[]);
 
+  useEffect(()=>{
+    const handle = setInterval(()=>{
+      setDebounceSearch(search);
+    },500);
+
+    return ()=> clearInterval(handle);
+  },[search])
+
   const searchFilter = (country) =>{
-    if(search){
+    if(debounceSearch){
       return country.name.common.toLowerCase().includes(search.toLowerCase());
     }
     return country;
