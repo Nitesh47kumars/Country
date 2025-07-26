@@ -1,5 +1,5 @@
 .country-details-container {
-  padding: 3rem;
+  padding: 3rem 1rem;
   min-height: 78vh;
   display: flex;
   justify-content: center;
@@ -9,6 +9,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
+  padding: 1rem;
   gap: 3rem;
   border: 1px solid white;
   border-radius: 20px;
@@ -19,11 +20,14 @@
   width: 100%;
   max-width: 80rem;
 }
+
 .country-detail-overlay{
   position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(to right,#000,#444,#000);
+  background: linear-gradient(to right,#000,#333,#000);
   filter: blur(5px);
   z-index: 0 ;
 }
@@ -36,7 +40,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
   flex: 1;
 }
 
@@ -48,28 +51,30 @@
 }
 
 .info-section {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: start;
   flex: 1.2;
-  padding: 1rem;
 }
 
 .info-section h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   color: white;
   font-weight: 900;
   margin-bottom: 0.7rem;
 }
 
 .info-section p {
-  font-size: 1rem;
+  font-size: clamp(0.7rem, 2vw, 1rem);
   color: #777;
   margin: 0.3rem 0;
   line-height: 1.6;
 }
 
 .info-section button{
+  width: 100%;
   background-color: green;
   border: none;
   outline: none;
@@ -82,4 +87,21 @@
 }
 .info-section button:hover{
   background-color: rgb(0, 113, 0);
+}
+
+
+@media screen and (max-width:600px) {
+  .country-details-card{
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1.5rem;
+  }
+  .flag-section{
+    margin-top: 2rem;
+  }
+  .info-section h1{
+    width: 100%;
+    text-align: center;
+  }
 }
