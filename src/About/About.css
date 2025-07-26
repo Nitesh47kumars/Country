@@ -4,7 +4,6 @@
   align-items: center;
   padding: 0 1rem;
   margin: clamp(2rem, 4vw, 2.5rem) 0;
-
 }
 
 .about-container > h1 {
@@ -19,15 +18,15 @@
   max-width: 80rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: clamp(1.5rem, 2vw, 2rem);
+  gap: clamp(1rem, 4vw, 2rem);
 }
 
 .about-card h1{
   margin-bottom: 0.2rem;
-  font-size: clamp(1.6rem, 8vw, 2.4rem);
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
 }
 .about-card p{
-  font-size: clamp(0.7rem, 2vw, 1rem);
+  font-size: clamp(0.7rem, 1vw, 1rem);
 }
 
 .about-card {
@@ -72,7 +71,7 @@
 /* Subtle pulse for depth */
 @keyframes pulse {
   0%, 100% {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
   }
   50% {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
