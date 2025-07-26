@@ -6,6 +6,10 @@ import { CiMenuFries } from "react-icons/ci";
 
 const Navbar = () => {
     const [mob,setMob] = useState(false);
+
+    const onLinkClicked = () =>{
+      setMob(false);
+    }
   return (
     <>
       <div className='navbar-container'>
@@ -15,19 +19,19 @@ const Navbar = () => {
         <nav className={mob? "mob-menu" : "web-menu"}>
             <ul>
                 <li>
-                    <NavLink to="/" >Home</NavLink>
+                    <NavLink to="/" onClick={onLinkClicked}>Home</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/about" >About</NavLink>
+                    <NavLink to="/about" onClick={onLinkClicked}>About</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/country" >Country</NavLink>
+                    <NavLink to="/country" onClick={onLinkClicked}>Country</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/contact" >Contact</NavLink>
+                    <NavLink to="/contact" onClick={onLinkClicked}>Contact</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/posts" >API-Pratice</NavLink>
+                    <NavLink to="/posts" onClick={onLinkClicked}>API-Pratice</NavLink>
                 </li>
                 <li>
                     <a href="https://github.com/Nitesh47kumars" >GitHub</a>
