@@ -16,13 +16,12 @@ const CountryData = () => {
       try{
         const res = await getCountryData(params.id);
         setCountry(res.data[0]);
-        console.log(res.data);
       }
       catch(e){
         console.log("Failed to Fetch Data...",e.message);
       }
     })
-  },[])
+  },[]);
 
   if(isPending || !country) return <Loader/>
   return (
@@ -38,10 +37,15 @@ const CountryData = () => {
         <div className='info-section'>
           <h1>{country.name.common}</h1>
           <p>Capital: <strong>{country.capital[0]}</strong></p>
-          <p>Language: <strong>{country.languages.ron}</strong></p>
+          <p>Language: {Object.keys(country.languages).map((curr)=>country.languages[curr]).join(", ")}
+            <strong>{country.languages.ron}</strong></p>
           <p>Currency: 
             {Object.keys(country.currencies).map((curr)=>{
-              return <strong>{country.currencies[curr].name} {country.currencies[curr].symbol}</strong>
+              return (
+              <strong key={curr}>
+                  {" "}{country.currencies[curr].name} {country.currencies[curr].symbol}
+                </strong>
+              )
               })}
           </p>
           <p>Border: {Object.keys(country.borders).map((curr)=>country.borders[curr]).join(",")}</p>
