@@ -6,7 +6,7 @@ import Contact from './Contact/Contact'
 import Country from './Country/Country'
 import CountryData from './Country/CountryData/CountryData'
 import Posts from './Component/Posts'
-
+import Accordion from './Accordion/Accordion'
 function App() {
 
   const router = createBrowserRouter([
@@ -30,6 +30,10 @@ function App() {
           path: "/country/:id",
           element:<CountryData/>
           
+        },
+        {
+          path: "/accordion",
+          element:<Accordion/>
         },
         {
           path: "/posts",

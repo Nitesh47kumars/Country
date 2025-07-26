@@ -31,6 +31,9 @@ const Navbar = () => {
                     <NavLink to="/contact" onClick={onLinkClicked}>Contact</NavLink>
                 </li>
                 <li>
+                    <NavLink to="/accordion" onClick={onLinkClicked}>Accordion</NavLink>
+                </li>
+                <li>
                     <NavLink to="/posts" onClick={onLinkClicked}>API-Pratice</NavLink>
                 </li>
                 <li>
