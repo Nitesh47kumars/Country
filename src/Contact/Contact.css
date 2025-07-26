@@ -1,11 +1,11 @@
 .contact-container{
-    margin-top: 5rem;
     min-height: 70vh;
     background-color: black;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
-    width: 30rem;
+    width: clamp(20rem, 80%, 30rem);
     border-radius: 8px;
     padding: 1rem;
 
