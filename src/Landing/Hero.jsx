@@ -1,7 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import './Hero.css'
 import { FaArrowRight } from "react-icons/fa";
 
 export const Hero = () => {
+  const navigate = useNavigate();
     return (
       <>
         <div className='hero-container'>
@@ -15,7 +17,7 @@ export const Hero = () => {
               Discover the history, culture, and beauty of every nation, Sort, search, and
               filter through countries to find the details you need.
             </p>
-            <button>Start Exploring<FaArrowRight /></button>
+            <button onClick={()=>navigate('/country')}>Start Exploring<FaArrowRight /></button>
           </div>
 
           <div className='hero-img'>
