@@ -83,8 +83,24 @@ const Form = ({post,setPost,updateInput,setUpdateInput}) => {
     <>
       <form className='post-form' onSubmit={onFormSubmit}>
         <div className='post-inputs'>
-            <input type='text' name='title' value={userInput.title} onChange={onHandleChange}/>
-            <input type='text' name='body' value={userInput.body} onChange={onHandleChange}/>
+            <input
+            type='text'
+            name='title'
+            autoComplete='off'
+            placeholder='Enter Here To Add Title...'
+            value={userInput.title}
+            onChange={onHandleChange}
+            />
+
+            <input
+            type='text'
+            name='body'
+            autoComplete='off'
+            placeholder='Enter Here To Add Bio...'
+            value={userInput.body}
+            onChange={onHandleChange}
+            />
+
         </div>
         <button value={isEmpty? "add" : 'update'}>{isEmpty? "add" : 'submit'}</button>
       </form>
