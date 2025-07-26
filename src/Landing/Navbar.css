@@ -5,7 +5,7 @@
 }
 
 .navbar-container{
-  background-color: rgb(5, 0, 163);
+  background-color: black;
   height: 4rem;
   width: 100vw;
   display: grid;
@@ -13,6 +13,7 @@
   align-items: center;
   padding: 0 1rem;
   position: relative;
+  box-shadow: 0 0 1.5rem rgb(33, 33, 33);
 }
 
 .navbar-header h1{
@@ -37,6 +38,10 @@ nav ul{
   }
 }
 
+.active{
+  color: rgb(0, 255, 68);
+}
+
 .mob-btn{
   display: none;
 }
@@ -56,6 +61,11 @@ nav ul{
     padding: 5px 8px;
     color: white;
     font-weight: 900;
+    box-shadow: 0 0 1px white;
+    transition: all 0.1s ease;
+  }
+  .mob-btn button:active{
+    scale: 0.95;
   }
   .mob-menu{
     position: absolute;
@@ -64,7 +74,7 @@ nav ul{
     z-index: 3;
     width: 100%;
     box-shadow: 1px 1px 0.1rem 0.1rem rgba(0, 0, 0,0.1);
-    background-color: rgb(47, 47, 47);
+    background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 1px 1px 0.3rem black;
     padding: 8px 0;
   }
