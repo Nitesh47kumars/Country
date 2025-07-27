@@ -14,7 +14,7 @@ const Navbar = () => {
     <>
       <div className='navbar-container'>
         <div className='navbar-header'>
-            <h1>Web App</h1>
+            <h1>Info-Nation</h1>
         </div>
         <nav className={mob? "mob-menu" : "web-menu"}>
             <ul>
